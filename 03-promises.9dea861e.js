@@ -5,4 +5,4 @@ var t,e=arguments[3];!function(e,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"GyVV":[function(require,module,exports) {
 "use strict";var e=t(require("notiflix"));function t(e){return e&&e.__esModule?e:{default:e}}const i=document.querySelector("form");function n(t){t.preventDefault();const i=t.currentTarget.elements.delay.value,n=t.currentTarget.elements.step.value,s=t.currentTarget.elements.amount.value;let l=1*i;for(let r=1;r<=s;r+=1)o(r,l).then(({position:t,delay:i})=>{e.default.Notify.success(`✅ Fulfilled promise ${t} in ${i}ms`,{width:"360px",svgSize:"120px"}),console.log(`✅ Fulfilled promise ${t} in ${i}ms`)}).catch(({position:t,delay:i})=>{e.default.Notify.failure(`❌ Rejected promise ${t} in ${i}ms`,{width:"360px",svgSize:"120px"}),console.log(`❌ Rejected promise ${t} in ${i}ms`)}),l+=1*n}function o(e,t){return new Promise((i,n)=>{const o=Math.random()>.3;setTimeout(()=>{o?i({position:e,delay:t}):n({position:e,delay:t})},t)})}i.addEventListener("submit",n);
 },{"notiflix":"cwzQ"}]},{},["GyVV"], null)
-//# sourceMappingURL=/parcel-project-template/03-promises.9dea861e.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.9dea861e.js.map
